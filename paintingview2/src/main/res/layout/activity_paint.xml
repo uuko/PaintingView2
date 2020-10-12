@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--app:srcCompat="@drawable/ic_unicorn"-->
+        <ImageView
+
+            android:id="@+id/horse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <com.example.ktforfilemanager.paintview.PPView
+            android:id="@+id/paintView"
+            android:layout_width="0dp"
+            android:layout_height="692dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/widthprogress" />
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/eraser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/eraser"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/go"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_paintbrush"
+                app:layout_constraintStart_toEndOf="@+id/eraser"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_undo_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/go"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/next"
+                android:background="@drawable/ic_redo_black_24dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_save_black_24dp" />
+
+            <Button
+                android:id="@+id/turn"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_forward_black_24dp"/>
+            <Button
+                android:id="@+id/cloud"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_cloud_black_24dp"/>
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/water"/>
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/widthprogress"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        <SeekBar
+            android:visibility="gone"
+            android:id="@+id/transparenctbar"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/widthprogress" />
+        <SeekBar
+            android:visibility="gone"
+            android:id="@+id/eraserprogress"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        <!--  android:visibility="gone"-->
+
+        <LinearLayout
+            android:id="@+id/chColorLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transparenctbar">
+
+            <Button
+                android:id="@+id/red"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="#FF0707"
+                />
+
+            <Button
+                android:id="@+id/yellow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="#FFC107" />
+            <Button
+                android:id="@+id/black"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="#000000" />
+
+            <Button
+                android:id="@+id/blue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="#3F51B5" />
+            <Button
+                android:id="@+id/orange"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="#E91E63" />
+            <Button
+                android:id="@+id/green"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="#4CAF50" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
