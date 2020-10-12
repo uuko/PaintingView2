@@ -1,5 +1,6 @@
 # PaintingView2
 
+目前releaseVersion為 com.github.uuko:PaintingView2:v1.0.2
 allprojects {
 		repositories {
 			...
@@ -9,5 +10,5 @@ allprojects {
   
   
   dependencies {
-	        implementation 'com.github.uuko:PaintingView2:67cb4a7c68'
+	        implementation 'com.github.uuko:PaintingView2:releaseVersion'
 	}
