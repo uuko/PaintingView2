@@ -4,7 +4,6 @@
 
     <application>
         <activity android:name=".PaintItActivity"></activity>
-        <activity android:name=".PaintView" />
     </application>
 
 </manifest>
