@@ -23,7 +23,7 @@
 
         <com.example.paintingview2.PPView
             android:id="@+id/paintView"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="692dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
